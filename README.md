@@ -4,7 +4,7 @@
 
 ## Apartado 1 (3 puntos)
 
-Crea una app sencilla utilizando el lenguaje **Python** con temas relacionados con la **ciberseguridad** como puede ser la **criptografía**.  
+Crea una app sencilla utilizando el lenguaje **Python** con temas relacionados con la **ciberseguridad** como puede ser la **criptografía**, por ejemplo.  
 Realiza **4 test unitarios** para esta app.
 
 ---
