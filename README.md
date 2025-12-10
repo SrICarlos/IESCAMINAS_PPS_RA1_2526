@@ -1,165 +1,147 @@
-✅ README – Entrega Completa RA1 – Ciberseguridad, Bash, Git & Solidity
+# ✅ README – Entrega Completa RA1 – Ciberseguridad, Bash, Git & Solidity
 
-Este repositorio contiene todos los apartados correspondientes al Resultado de Aprendizaje RA1, incluyendo Python, Bash, Git Branching y Solidity.
-La estructura y el contenido cumplen exactamente los requisitos de la práctica evaluable.
+Este repositorio contiene todos los apartados correspondientes al **Resultado de Aprendizaje RA1**, incluyendo Python, Bash, Git Branching y Solidity. La estructura y el contenido cumplen exactamente los requisitos de la práctica evaluable.
 
-🟦 1. Aplicación de Criptografía en Python + Tests Unitarios
+## Contenido
 
-En este apartado se desarrolla una aplicación de criptografía en Python con diversas funciones centradas en hashing y codificación.
+- Apartado 1: Aplicación de criptografía en Python + tests (pytest)
+- Apartado 2: Script Bash de información del sistema
+- Apartado 3: Ejercicios de Git Branching (capturas incluidas)
+- Apartado 4: Smart contract en Solidity (Merkle Tree) y captura
 
-🔐 Funcionalidades Implementadas
+---
 
-Hasheo SHA-256 de un texto.
+## 🟦 1. Aplicación de Criptografía en Python + Tests Unitarios
 
-Verificación de contraseñas mediante hash.
+En este apartado se desarrolla una aplicación de criptografía en Python con funciones centradas en hashing y codificación.
 
-Codificación y decodificación Base64.
+### 🔐 Funcionalidades implementadas
 
-Menú interactivo con opciones:
+- Hasheo SHA-256 de un texto.
+- Verificación de contraseñas mediante hash.
+- Codificación y decodificación Base64.
+- Menú interactivo con opciones:
+  - Encriptar (SHA-256 o Base64)
+  - Desencriptar (Base64)
+  - Fuerza bruta SHA-256 (palabras de hasta 4 caracteres en minúsculas)
+- 6 tests unitarios implementados con pytest (cobertura de funciones principales).
 
-Encriptar (SHA-256 o Base64)
+### ▶️ Cómo ejecutar
 
-Desencriptar (Base64)
+Ejecutar la aplicación interactiva:
 
-Fuerza bruta SHA-256 (palabras de hasta 4 caracteres en minúsculas)
+```bash
+python EJ1/app.py
+```
 
-6 tests unitarios implementados con pytest.
+Ejecutar los tests con pytest:
 
-▶️ Ejecución de la aplicación
-python crypto_app.py
-
-▶️ Ejecución de los tests unitarios
+```bash
 pytest -v
+```
 
-🧠 Tecnologías y conceptos utilizados
+### 🧠 Tecnologías y conceptos utilizados
 
-Criptografía de hash (SHA-256)
+- Criptografía de hash (SHA-256)
+- Codificación Base64
+- Fuerza bruta (attenuada: palabras hasta 4 letras, minúsculas)
+- Testing automático con pytest
+- Diseño modular de funciones para facilitar testeo y comprensión
 
-Codificación Base64
+---
 
-Fuerza bruta
+## 🟧 2. Script Bash de Información del Sistema
 
-Testing automático (pytest)
+Script que muestra en un único mensaje:
 
-Diseño modular de funciones
+- Dirección MAC (si está disponible)
+- Sistema operativo
+- Hostname
+- Usuario actual
 
-🟧 2. Script Bash de Información del Sistema
+### ▶️ Cómo ejecutar
 
-Este apartado incluye un script Bash que muestra en un único mensaje:
+Dar permisos y ejecutar:
 
-Dirección MAC
+```bash
+chmod +x EJ2/script.sh
+./EJ2/script.sh
+```
 
-Sistema operativo
+### 🧩 Compatibilidad
 
-Hostname
+| Sistema | Estado | Notas |
+|--------:|:-----:|:-----|
+| Linux | ✔️ Funciona | Obtiene MAC correctamente |
+| macOS | ✔️ Funciona | Igual que en Linux |
+| Windows (Git Bash) | ✔️ Parcial | Puede no obtener la MAC; si no está disponible, el script devuelve: "MAC no disponible" |
 
-Usuario actual
+### 🧠 Conceptos aplicados
 
-▶️ Ejecución
+- Comandos del sistema (`ifconfig`, `ip`, `getmac`)
+- Manejo de errores y detección de entorno
+- Compatibilidad multiplataforma básica
 
-Dar permisos:
+---
 
-chmod +x script.sh
+## 🟩 3. Git Branching – LearnGitBranching
 
+Se han completado los ejercicios requeridos en: https://learngitbranching.js.org/
 
-Ejecutar:
+### 📸 Capturas incluidas
 
-./script.sh
-
-🧩 Compatibilidad
-Sistema	Estado	Notas
-Linux	✔ Funciona	Obtiene MAC correctamente
-macOS	✔ Funciona	Igual que en Linux
-Windows (Git Bash)	✔ Parcial	Puede no obtener la MAC
-
-En caso de no poder extraer la MAC, el script devuelve:
-
-MAC no disponible
-
-🧠 Conceptos aplicados
-
-Comandos del sistema (ifconfig, ip, getmac)
-
-Manejo de errores
-
-Compatibilidad multiplataforma
-
-🟩 3. Git Branching – LearnGitBranching
-
-Se han completado los ejercicios requeridos en:
-
-https://learngitbranching.js.org/
-
-📸 Capturas incluidas
-
-pantallazo_main.jpg (vista Main)
-
-pantallazo_remote.jpg (vista Remote)
+- `Apartado3/pantallazo_main.jpg` (vista Main)
+- `Apartado3/pantallazo_remote.jpg` (vista Remote)
 
 Cada captura incluye identificadores propios que prueban la autoría.
 
-🧠 Conceptos aplicados
+### 🧠 Conceptos aplicados
 
-Creación y manejo de ramas
+- Creación y manejo de ramas
+- Merge y rebase
+- Remote tracking, push/pull
+- Resolución de conflictos
 
-Merge
+---
 
-Rebase
+## 🟪 4. Solidity – Merkle Tree
 
-Remote Tracking
+Tras completar el tutorial solicitado, este apartado contiene:
 
-Push/Pull
+- Captura del tutorial con identificador personal: `Apartado4/pantallazo_solidity.jpg`
+- Smart contract en Solidity que implementa la base de un árbol de Merkle:
+  - Inserción de hojas (hashes)
+  - Almacenamiento seguro
+  - Preparación para la generación de raíz y la verificación de pruebas (Merkle Proofs)
 
-Resolución de conflictos
+### 🧠 Conceptos aplicados
 
-🟪 4. Solidity – Merkle Tree
+- Hashing en Solidity
+- Estructuras criptográficas y árboles de Merkle
+- Buenas prácticas en contratos inteligentes
 
-Tras completar el tutorial solicitado en Aules, este apartado contiene:
+---
 
-📸 Captura del tutorial
+## 🟦 5. Estructura del proyecto
 
-Incluye nombre o identificador personal.
+La estructura requerida del entregable es (reemplazar NOMBRE_APELLIDO1_APELLIDO2 por el nombre real según se indique en la entrega):
 
-🔐 Smart Contract desarrollado
-
-Un contrato en Solidity que implementa la base de un árbol de Merkle, permitiendo:
-
-Inserción de hojas (hashes)
-
-Almacenamiento seguro
-
-Preparación para generación de raíz y pruebas (Merkle Proofs)
-
-🧠 Conceptos aplicados
-
-Hashing en Solidity
-
-Estructuras criptográficas
-
-Árboles de decisión
-
-Buenas prácticas en contratos inteligentes
-
-🟦 5. Estructura del proyecto
+```
 NOMBRE_APELLIDO1_APELLIDO2/
-│
 ├── Apartado1/
 │   ├── crypto_app.py
 │   ├── test_crypto_app.py
 │   └── README.md
-│
 ├── Apartado2/
 │   ├── script.sh
 │   └── README.md
-│
 ├── Apartado3/
 │   ├── pantallazo_main.jpg
 │   ├── pantallazo_remote.jpg
 │   └── README.md
-│
 ├── Apartado4/
 │   ├── merkle_contract.sol
 │   ├── pantallazo_solidity.jpg
 │   └── README.md
-│
-└── README.md   ← Este documento
+└── README.md
+```
