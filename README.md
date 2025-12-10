@@ -1,12 +1,13 @@
-📄 README – Entrega Completa RA1 – Ciberseguridad, Bash, Git & Solidity
+✅ README – Entrega Completa RA1 – Ciberseguridad, Bash, Git & Solidity
 
-Este documento recoge toda la información necesaria para comprender y ejecutar los distintos apartados del Resultado de Aprendizaje RA1, incluyendo Python, Bash, GIT y Solidity, siguiendo exactamente los requisitos descritos en la práctica.
+Este repositorio contiene todos los apartados correspondientes al Resultado de Aprendizaje RA1, incluyendo Python, Bash, Git Branching y Solidity.
+La estructura y el contenido cumplen exactamente los requisitos de la práctica evaluable.
 
-🟦 📌 Apartado 1 – Aplicación de Criptografía en Python + Tests Unitarios
+🟦 1. Aplicación de Criptografía en Python + Tests Unitarios
 
-En este apartado se desarrolla una aplicación de criptografía en Python que permite:
+En este apartado se desarrolla una aplicación de criptografía en Python con diversas funciones centradas en hashing y codificación.
 
-🔐 Funcionalidades implementadas
+🔐 Funcionalidades Implementadas
 
 Hasheo SHA-256 de un texto.
 
@@ -14,55 +15,47 @@ Verificación de contraseñas mediante hash.
 
 Codificación y decodificación Base64.
 
-Sistema de menú interactivo con:
+Menú interactivo con opciones:
 
-Encriptar (SHA256 o Base64)
+Encriptar (SHA-256 o Base64)
 
 Desencriptar (Base64)
 
-Intento de fuerza bruta SHA256 (para palabras de hasta 4 caracteres en minúsculas).
+Fuerza bruta SHA-256 (palabras de hasta 4 caracteres en minúsculas)
 
-Implementación de pruebas unitarias (un total de 6) con pytest.
+6 tests unitarios implementados con pytest.
 
 ▶️ Ejecución de la aplicación
-
-Dentro del directorio del apartado 1:
-
 python crypto_app.py
 
 ▶️ Ejecución de los tests unitarios
-
-Los tests están diseñados para validar las funciones sin depender del menú interactivo.
-
-Ejecutarlos con:
-
 pytest -v
 
-🧠 Tecnologías y conceptos aplicados
+🧠 Tecnologías y conceptos utilizados
 
 Criptografía de hash (SHA-256)
 
 Codificación Base64
 
-Fuerza bruta para búsqueda de pre-imagen
+Fuerza bruta
 
-Testing automático con pytest
+Testing automático (pytest)
 
 Diseño modular de funciones
 
-🟧 📌 Apartado 2 – Script Bash de Obtención de Información del Sistema
+🟧 2. Script Bash de Información del Sistema
 
-Se incluye un script Bash que obtiene y muestra en un único mensaje:
+Este apartado incluye un script Bash que muestra en un único mensaje:
 
-La MAC del equipo
+Dirección MAC
 
-El sistema operativo
+Sistema operativo
 
-El hostname
+Hostname
 
-El usuario que ejecuta el script
+Usuario actual
 
-▶️ Ejecución del script
+▶️ Ejecución
 
 Dar permisos:
 
@@ -74,120 +67,99 @@ Ejecutar:
 ./script.sh
 
 🧩 Compatibilidad
+Sistema	Estado	Notas
+Linux	✔ Funciona	Obtiene MAC correctamente
+macOS	✔ Funciona	Igual que en Linux
+Windows (Git Bash)	✔ Parcial	Puede no obtener la MAC
 
-El script funciona correctamente en:
-
-Sistema	Compatibilidad general	MAC
-Linux	✔ Funciona	✔ Sí
-macOS	✔ Funciona	✔ Sí
-Windows (Git Bash)	✔ Funciona	⚠ Puede no obtener MAC
-
-En caso de no encontrar la dirección MAC, el script devolverá:
+En caso de no poder extraer la MAC, el script devuelve:
 
 MAC no disponible
 
+🧠 Conceptos aplicados
 
-Esto no rompe el script y cumple el requisito de mostrar un único mensaje con la información.
+Comandos del sistema (ifconfig, ip, getmac)
 
-🧠 Tecnologías aplicadas
-
-Uso de comandos del sistema (ifconfig, ip, getmac)
-
-Control de errores
+Manejo de errores
 
 Compatibilidad multiplataforma
 
-🟩 📌 Apartado 3 – Git Branching (LearnGitBranching)
+🟩 3. Git Branching – LearnGitBranching
 
-Se han realizado los ejercicios del tutorial de:
+Se han completado los ejercicios requeridos en:
 
 https://learngitbranching.js.org/
 
-📸 Se incluyen dos capturas obligatorias:
+📸 Capturas incluidas
 
-Pestaña Main (Principal)
+pantallazo_main.jpg (vista Main)
 
-Pestaña Remote (Remota)
+pantallazo_remote.jpg (vista Remote)
 
-Las capturas incluyen elementos identificativos propios para demostrar que han sido obtenidas por mí (por ejemplo, nombre visible junto a la pantalla o terminal abierta).
+Cada captura incluye identificadores propios que prueban la autoría.
 
 🧠 Conceptos aplicados
 
-Branching
+Creación y manejo de ramas
 
 Merge
 
 Rebase
 
-Remote tracking
+Remote Tracking
 
-Push y Pull
+Push/Pull
 
 Resolución de conflictos
 
-🟪 📌 Apartado 4 – Solidity + Merkle Tree
+🟪 4. Solidity – Merkle Tree
 
-Tras realizar el tutorial solicitado en Aules, se incluye:
+Tras completar el tutorial solicitado en Aules, este apartado contiene:
 
-📸 Captura de resultados del tutorial de Solidity
+📸 Captura del tutorial
 
-Incluye un identificador propio para demostrar autoría.
+Incluye nombre o identificador personal.
 
 🔐 Smart Contract desarrollado
 
-Se implementa un contrato en Solidity que representa el inicio de un árbol de Merkle (Merkle Tree):
+Un contrato en Solidity que implementa la base de un árbol de Merkle, permitiendo:
 
 Inserción de hojas (hashes)
 
-Almacenamiento privado
+Almacenamiento seguro
 
-Preparado para generar raíz y pruebas (Merkle Proofs)
+Preparación para generación de raíz y pruebas (Merkle Proofs)
 
-Este contrato demuestra comprensión de:
+🧠 Conceptos aplicados
 
 Hashing en Solidity
 
-Árboles de decisión criptográficos
+Estructuras criptográficas
 
-Estructuras de datos
+Árboles de decisión
 
-Buenas prácticas de diseño en contratos inteligentes
+Buenas prácticas en contratos inteligentes
 
-🟦 📁 Estructura del proyecto
+🟦 5. Estructura del proyecto
 NOMBRE_APELLIDO1_APELLIDO2/
+│
 ├── Apartado1/
 │   ├── crypto_app.py
 │   ├── test_crypto_app.py
-│   └── README.md (opcional si deseas separar)
+│   └── README.md
+│
 ├── Apartado2/
 │   ├── script.sh
-│   └── README.md (opcional)
+│   └── README.md
+│
 ├── Apartado3/
 │   ├── pantallazo_main.jpg
 │   ├── pantallazo_remote.jpg
-│   └── README.md (opcional)
+│   └── README.md
+│
 ├── Apartado4/
 │   ├── merkle_contract.sol
 │   ├── pantallazo_solidity.jpg
-│   └── README.md (opcional)
-└── README.md   ← ESTE DOCUMENTO
-
-🟫 📌 Subida al repositorio y Pull Request
-
-Clonar el repositorio original proporcionado por el profesor.
-
-Crear una nueva rama de trabajo.
-
-Añadir la carpeta con mi nombre y apellidos:
-NOMBRE_APELLIDO1_APELLIDO2/
-
-Subir toda la solución:
-
-git add .
-git commit -m "Entrega completa RA1"
-git push origin mi-rama
-
-
-Crear un Pull Request hacia la rama principal del repositorio.
-
-Con esto, la entrega queda completamente realizada.
+│   └── README.md
+│
+└── README.md   ← Este documento
